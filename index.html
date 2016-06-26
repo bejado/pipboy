@@ -1,3 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pipboy</title>
+  <link rel="stylesheet" media="all" href="/assets/application-741534c04df171f4cb13b0eb24e16e6e2de3bcad9da6fedc0f0847e491bfa701.css" data-turbolinks-track="true" />
+  <script src="/assets/application-375b3bccce10d2f1b55aabf4e3893e710aba22cd9744e3bbec5581066ff0aa40.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="p0u4DoLoovxh36Ca26aCG4UA3fQSP9HFAW4spsNZwbBqegFfVSv1183VwaN8Q9E2AORioJxE0iaioGW42h25ng==" />
+</head>
+<body>
 
-<!-- saved from url=(0022)http://localhost:3000/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div class="line-gutter-backdrop"></div><table><tbody><tr><td class="line-number" value="1"></td><td class="line-content"><span class="html-doctype">&lt;!DOCTYPE html&gt;</span></td></tr><tr><td class="line-number" value="2"></td><td class="line-content"><span class="html-tag">&lt;html&gt;</span></td></tr><tr><td class="line-number" value="3"></td><td class="line-content"><span class="html-tag">&lt;head&gt;</span></td></tr><tr><td class="line-number" value="4"></td><td class="line-content">  <span class="html-tag">&lt;title&gt;</span>Pipboy<span class="html-tag">&lt;/title&gt;</span></td></tr><tr><td class="line-number" value="5"></td><td class="line-content">  <span class="html-tag">&lt;link <span class="html-attribute-name">rel</span>="<span class="html-attribute-value">stylesheet</span>" <span class="html-attribute-name">media</span>="<span class="html-attribute-value">all</span>" <span class="html-attribute-name">href</span>="<a class="html-attribute-value html-resource-link" target="_blank" href="http://localhost:3000/assets/application-741534c04df171f4cb13b0eb24e16e6e2de3bcad9da6fedc0f0847e491bfa701.css">/assets/application-741534c04df171f4cb13b0eb24e16e6e2de3bcad9da6fedc0f0847e491bfa701.css</a>" <span class="html-attribute-name">data-turbolinks-track</span>="<span class="html-attribute-value">true</span>" /&gt;</span></td></tr><tr><td class="line-number" value="6"></td><td class="line-content">  <span class="html-tag">&lt;script <span class="html-attribute-name">src</span>="<a class="html-attribute-value html-resource-link" target="_blank" href="http://localhost:3000/assets/application-375b3bccce10d2f1b55aabf4e3893e710aba22cd9744e3bbec5581066ff0aa40.js">/assets/application-375b3bccce10d2f1b55aabf4e3893e710aba22cd9744e3bbec5581066ff0aa40.js</a>" <span class="html-attribute-name">data-turbolinks-track</span>="<span class="html-attribute-value">true</span>"&gt;</span><span class="html-tag">&lt;/script&gt;</span></td></tr><tr><td class="line-number" value="7"></td><td class="line-content">  <span class="html-tag">&lt;meta <span class="html-attribute-name">name</span>="<span class="html-attribute-value">csrf-param</span>" <span class="html-attribute-name">content</span>="<span class="html-attribute-value">authenticity_token</span>" /&gt;</span></td></tr><tr><td class="line-number" value="8"></td><td class="line-content"><span class="html-tag">&lt;meta <span class="html-attribute-name">name</span>="<span class="html-attribute-value">csrf-token</span>" <span class="html-attribute-name">content</span>="<span class="html-attribute-value">V9Z8t4PVFB4/JYRkOtXQdO/W+IoC6qSXucCknc9/RRua58XmVBZDNZMv5V2dMINZajJH3oyRp3QaDu2D1js9NQ==</span>" /&gt;</span></td></tr><tr><td class="line-number" value="9"></td><td class="line-content"><span class="html-tag">&lt;/head&gt;</span></td></tr><tr><td class="line-number" value="10"></td><td class="line-content"><span class="html-tag">&lt;body&gt;</span></td></tr><tr><td class="line-number" value="11"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="12"></td><td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">id</span>='<span class="html-attribute-value">shader-fs</span>' <span class="html-attribute-name">type</span>="<span class="html-attribute-value">x-shader/x-fragment</span>"&gt;</span></td></tr><tr><td class="line-number" value="13"></td><td class="line-content">  precision mediump float;</td></tr><tr><td class="line-number" value="14"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="15"></td><td class="line-content">  varying vec2 fTexCoord;</td></tr><tr><td class="line-number" value="16"></td><td class="line-content">  uniform sampler2D uGraphicSampler;</td></tr><tr><td class="line-number" value="17"></td><td class="line-content">  uniform sampler2D uGlareSampler;</td></tr><tr><td class="line-number" value="18"></td><td class="line-content">  uniform sampler2D uScanlineSampler;</td></tr><tr><td class="line-number" value="19"></td><td class="line-content">  uniform sampler2D uDistortSampler;</td></tr><tr><td class="line-number" value="20"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="21"></td><td class="line-content">  uniform float aValue;</td></tr><tr><td class="line-number" value="22"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="23"></td><td class="line-content">  uniform float scroll;</td></tr><tr><td class="line-number" value="24"></td><td class="line-content">  uniform float offset;</td></tr><tr><td class="line-number" value="25"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="26"></td><td class="line-content">  vec3 composite(vec3 a, vec3 b, vec3 alpha) {</td></tr><tr><td class="line-number" value="27"></td><td class="line-content">    return a * alpha + b * (vec3(1.0, 1.0, 1.0) - alpha);</td></tr><tr><td class="line-number" value="28"></td><td class="line-content">  }</td></tr><tr><td class="line-number" value="29"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="30"></td><td class="line-content">  vec3 composite(vec3 a, vec3 b, float alpha) {</td></tr><tr><td class="line-number" value="31"></td><td class="line-content">    return composite(a, b, vec3(alpha, alpha, alpha));</td></tr><tr><td class="line-number" value="32"></td><td class="line-content">  }</td></tr><tr><td class="line-number" value="33"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="34"></td><td class="line-content">  vec4 scanLine(vec4 graphic, vec4 glare, vec4 scanline) {</td></tr><tr><td class="line-number" value="35"></td><td class="line-content">    vec3 backgroundColor = vec3(.0145, .1, .0396) + glare.rgb / 2.0;</td></tr><tr><td class="line-number" value="36"></td><td class="line-content">    vec3 scanColor = vec3(.145, 1.0, .396);</td></tr><tr><td class="line-number" value="37"></td><td class="line-content">    vec4 pixelColor = vec4(composite(scanColor, backgroundColor, graphic.a), 1);</td></tr><tr><td class="line-number" value="38"></td><td class="line-content">    return pixelColor * scanline;</td></tr><tr><td class="line-number" value="39"></td><td class="line-content">  }</td></tr><tr><td class="line-number" value="40"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="41"></td><td class="line-content">  vec2 verticalOffset(vec2 coords, float offset) {</td></tr><tr><td class="line-number" value="42"></td><td class="line-content">    float tValue = coords.t;</td></tr><tr><td class="line-number" value="43"></td><td class="line-content">    tValue += offset;</td></tr><tr><td class="line-number" value="44"></td><td class="line-content">    if (tValue &gt; 1.0) tValue -= 1.0;</td></tr><tr><td class="line-number" value="45"></td><td class="line-content">    if (tValue &lt; 0.0) tValue += 1.0;</td></tr><tr><td class="line-number" value="46"></td><td class="line-content">    return vec2(coords.s, tValue);</td></tr><tr><td class="line-number" value="47"></td><td class="line-content">  }</td></tr><tr><td class="line-number" value="48"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="49"></td><td class="line-content">  void main(void) {</td></tr><tr><td class="line-number" value="50"></td><td class="line-content">    // Apply a horizontal wrapping offset to the texture coordinates</td></tr><tr><td class="line-number" value="51"></td><td class="line-content">    vec2 adjustedTexCoord = verticalOffset(fTexCoord, offset);</td></tr><tr><td class="line-number" value="52"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="53"></td><td class="line-content">    // Sample textures</td></tr><tr><td class="line-number" value="54"></td><td class="line-content">    vec4 graphic = texture2D(uGraphicSampler, adjustedTexCoord.st);</td></tr><tr><td class="line-number" value="55"></td><td class="line-content">    vec4 glare = texture2D(uGlareSampler, adjustedTexCoord.st);</td></tr><tr><td class="line-number" value="56"></td><td class="line-content">    vec4 scanline = texture2D(uScanlineSampler, vec2(adjustedTexCoord.s, adjustedTexCoord.t * 150.0)); </td></tr><tr><td class="line-number" value="57"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="58"></td><td class="line-content">    // Scanline</td></tr><tr><td class="line-number" value="59"></td><td class="line-content">    vec4 renderedColor = scanLine(graphic, glare, scanline);</td></tr><tr><td class="line-number" value="60"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="61"></td><td class="line-content">    // Calculate distortion</td></tr><tr><td class="line-number" value="62"></td><td class="line-content">    float distortHeight = 64.0 * 5.5;   // height in device pixels</td></tr><tr><td class="line-number" value="63"></td><td class="line-content">    float renderTargetHeight = 1200.0;    // height in device pixels</td></tr><tr><td class="line-number" value="64"></td><td class="line-content">    vec2 distortSamplePosition = vec2(adjustedTexCoord.s, clamp((adjustedTexCoord.t - (1.0 - scroll)) * (renderTargetHeight / distortHeight), 0.0, 1.0));</td></tr><tr><td class="line-number" value="65"></td><td class="line-content">    vec4 distort = texture2D(uDistortSampler, distortSamplePosition) * 2.0 * (1.0 - distortSamplePosition.t);</td></tr><tr><td class="line-number" value="66"></td><td class="line-content">    vec3 distortAlpha = distort.rgb;</td></tr><tr><td class="line-number" value="67"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="68"></td><td class="line-content">    vec3 normalScreen = renderedColor.rgb;</td></tr><tr><td class="line-number" value="69"></td><td class="line-content">    vec3 screenWithDistortion = normalScreen * 2.5;</td></tr><tr><td class="line-number" value="70"></td><td class="line-content">    renderedColor = vec4(composite(screenWithDistortion, normalScreen, distortAlpha), 1.0);</td></tr><tr><td class="line-number" value="71"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="72"></td><td class="line-content">    // Calculate rolloff</td></tr><tr><td class="line-number" value="73"></td><td class="line-content">    float x = adjustedTexCoord.s * 2.0 - 1.0;</td></tr><tr><td class="line-number" value="74"></td><td class="line-content">    float rolloff = 1.0 - pow(abs(x), 15.0);</td></tr><tr><td class="line-number" value="75"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="76"></td><td class="line-content">    gl_FragColor = renderedColor * rolloff;</td></tr><tr><td class="line-number" value="77"></td><td class="line-content">  }</td></tr><tr><td class="line-number" value="78"></td><td class="line-content"><span class="html-tag">&lt;/script&gt;</span></td></tr><tr><td class="line-number" value="79"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="80"></td><td class="line-content"><span class="html-tag">&lt;script <span class="html-attribute-name">id</span>='<span class="html-attribute-value">shader-vs</span>' <span class="html-attribute-name">type</span>="<span class="html-attribute-value">x-shader/x-vertex</span>"&gt;</span></td></tr><tr><td class="line-number" value="81"></td><td class="line-content">  attribute vec3 aVertexPosition;</td></tr><tr><td class="line-number" value="82"></td><td class="line-content">  attribute vec2 aTexCoord;</td></tr><tr><td class="line-number" value="83"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="84"></td><td class="line-content">  varying vec2 fTexCoord;</td></tr><tr><td class="line-number" value="85"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="86"></td><td class="line-content">  void main(void) {</td></tr><tr><td class="line-number" value="87"></td><td class="line-content">    gl_Position = vec4(aVertexPosition, 1.0);</td></tr><tr><td class="line-number" value="88"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="89"></td><td class="line-content">    fTexCoord = aTexCoord;</td></tr><tr><td class="line-number" value="90"></td><td class="line-content">  }</td></tr><tr><td class="line-number" value="91"></td><td class="line-content"><span class="html-tag">&lt;/script&gt;</span></td></tr><tr><td class="line-number" value="92"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="93"></td><td class="line-content"><span class="html-tag">&lt;body&gt;</span></td></tr><tr><td class="line-number" value="94"></td><td class="line-content">  <span class="html-comment">&lt;!-- Force Monofonto to load --&gt;</span></td></tr><tr><td class="line-number" value="95"></td><td class="line-content">  <span class="html-tag">&lt;div <span class="html-attribute-name">style</span>="<span class="html-attribute-value">font-family: Monofonto; font-size: 0px</span>"&gt;</span>.<span class="html-tag">&lt;/div&gt;</span></td></tr><tr><td class="line-number" value="96"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="97"></td><td class="line-content">  <span class="html-tag">&lt;canvas <span class="html-attribute-name">id</span>='<span class="html-attribute-value">texture_canvas</span>' <span class="html-attribute-name">width</span>='<span class="html-attribute-value">800</span>' <span class="html-attribute-name">height</span>='<span class="html-attribute-value">600</span>' <span class="html-attribute-name">hidden</span>='<span class="html-attribute-value">true</span>'&gt;</span><span class="html-tag">&lt;/canvas&gt;</span></td></tr><tr><td class="line-number" value="98"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="99"></td><td class="line-content">  <span class="html-tag">&lt;div <span class="html-attribute-name">id</span>='<span class="html-attribute-value">pipboy_canvas_container</span>'&gt;</span></td></tr><tr><td class="line-number" value="100"></td><td class="line-content">    <span class="html-tag">&lt;canvas <span class="html-attribute-name">id</span>='<span class="html-attribute-value">pipboy_canvas</span>' <span class="html-attribute-name">width</span>='<span class="html-attribute-value">1600</span>' <span class="html-attribute-name">height</span>='<span class="html-attribute-value">1200</span>' <span class="html-attribute-name">style</span>='<span class="html-attribute-value">width: 800px; height: 600px</span>'&gt;</span><span class="html-tag">&lt;/canvas&gt;</span></td></tr><tr><td class="line-number" value="101"></td><td class="line-content">  <span class="html-tag">&lt;/div&gt;</span></td></tr><tr><td class="line-number" value="102"></td><td class="line-content"><span class="html-tag">&lt;/body&gt;</span></td></tr><tr><td class="line-number" value="103"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="104"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="105"></td><td class="line-content"><span class="html-tag">&lt;/body&gt;</span></td></tr><tr><td class="line-number" value="106"></td><td class="line-content"><span class="html-tag">&lt;/html&gt;</span></td></tr><tr><td class="line-number" value="107"></td><td class="line-content"><span class="html-end-of-file"></span></td></tr></tbody></table></body></html>
+<script id='shader-fs' type="x-shader/x-fragment">
+  precision mediump float;
+
+  varying vec2 fTexCoord;
+  uniform sampler2D uGraphicSampler;
+  uniform sampler2D uGlareSampler;
+  uniform sampler2D uScanlineSampler;
+  uniform sampler2D uDistortSampler;
+
+  uniform float aValue;
+
+  uniform float scroll;
+  uniform float offset;
+
+  vec3 composite(vec3 a, vec3 b, vec3 alpha) {
+    return a * alpha + b * (vec3(1.0, 1.0, 1.0) - alpha);
+  }
+
+  vec3 composite(vec3 a, vec3 b, float alpha) {
+    return composite(a, b, vec3(alpha, alpha, alpha));
+  }
+
+  vec4 scanLine(vec4 graphic, vec4 glare, vec4 scanline) {
+    vec3 backgroundColor = vec3(.0145, .1, .0396) + glare.rgb / 2.0;
+    vec3 scanColor = vec3(.145, 1.0, .396);
+    vec4 pixelColor = vec4(composite(scanColor, backgroundColor, graphic.a), 1);
+    return pixelColor * scanline;
+  }
+
+  vec2 verticalOffset(vec2 coords, float offset) {
+    float tValue = coords.t;
+    tValue += offset;
+    if (tValue > 1.0) tValue -= 1.0;
+    if (tValue < 0.0) tValue += 1.0;
+    return vec2(coords.s, tValue);
+  }
+
+  void main(void) {
+    // Apply a horizontal wrapping offset to the texture coordinates
+    vec2 adjustedTexCoord = verticalOffset(fTexCoord, offset);
+
+    // Sample textures
+    vec4 graphic = texture2D(uGraphicSampler, adjustedTexCoord.st);
+    vec4 glare = texture2D(uGlareSampler, adjustedTexCoord.st);
+    vec4 scanline = texture2D(uScanlineSampler, vec2(adjustedTexCoord.s, adjustedTexCoord.t * 150.0)); 
+
+    // Scanline
+    vec4 renderedColor = scanLine(graphic, glare, scanline);
+
+    // Calculate distortion
+    float distortHeight = 64.0 * 5.5;   // height in device pixels
+    float renderTargetHeight = 1200.0;    // height in device pixels
+    vec2 distortSamplePosition = vec2(adjustedTexCoord.s, clamp((adjustedTexCoord.t - (1.0 - scroll)) * (renderTargetHeight / distortHeight), 0.0, 1.0));
+    vec4 distort = texture2D(uDistortSampler, distortSamplePosition) * 2.0 * (1.0 - distortSamplePosition.t);
+    vec3 distortAlpha = distort.rgb;
+
+    vec3 normalScreen = renderedColor.rgb;
+    vec3 screenWithDistortion = normalScreen * 2.5;
+    renderedColor = vec4(composite(screenWithDistortion, normalScreen, distortAlpha), 1.0);
+
+    // Calculate rolloff
+    float x = adjustedTexCoord.s * 2.0 - 1.0;
+    float rolloff = 1.0 - pow(abs(x), 15.0);
+
+    gl_FragColor = renderedColor * rolloff;
+  }
+</script>
+
+<script id='shader-vs' type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+  attribute vec2 aTexCoord;
+
+  varying vec2 fTexCoord;
+
+  void main(void) {
+    gl_Position = vec4(aVertexPosition, 1.0);
+
+    fTexCoord = aTexCoord;
+  }
+</script>
+
+<body>
+  <!-- Force Monofonto to load -->
+  <div style="font-family: Monofonto; font-size: 0px">.</div>
+
+  <canvas id='texture_canvas' width='800' height='600' hidden='true'></canvas>
+
+  <div id='pipboy_canvas_container'>
+    <canvas id='pipboy_canvas' width='1600' height='1200' style='width: 800px; height: 600px'></canvas>
+  </div>
+</body>
+
+
+</body>
+</html>
